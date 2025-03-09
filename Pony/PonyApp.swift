@@ -13,5 +13,9 @@ struct PonyApp: App {
         WindowGroup {
             ContentView()
         }
+#if os(macOS)
+        .windowStyle(.hiddenTitleBar)
+        .windowResizability(.contentSize)
+#endif
     }
 }
